@@ -8,14 +8,31 @@ html{
 	color: #888;
 }
 
+.b-clear {
+  clear: both;
+}
+.b-clear:before,
+.b-clear:after {
+  content: '';
+  display: table;
+}
+.b-clear:after {
+  clear: both;
+}
+
 .b-h1{
 	 font: 700 72px/72px 'Open Sans', sans-serif;
 	 color: #07080a;
 	 margin: 0;
+	 &_lh{
+	 	line-height: 84px;
+	 }
 }
 
 ul{
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .b-wrapper{
@@ -197,6 +214,156 @@ ul{
 	height: 100%;
 	background: url('../images/stars-big.png') repeat;
 	z-index: 2;
+}
+
+///
+
+
+/// Второй блок
+
+.b-second-box{
+	padding: 110px 0;
+	width: 100%;
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+	border-bottom: 1px solid #d5d4d4;
+}
+
+.b-block-left{
+	height: 100%;
+	float: left;
+	width: 435px;
+}
+
+.b-block-right{
+	height: 100%;
+	width: 735px;
+	float: right;
+}
+
+.b-switch{
+	display: block;
+	padding: 0;
+	&__item{
+		display: inline-block;
+		font-size: 30px;
+		padding-bottom: 15px;
+		color: #9c9c9c;
+		margin-right: 133px;
+		font-weight: 700;
+		position: relative;
+		cursor: pointer;
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: -15px;
+			right: -25px;
+			background: url('../images/switch.png') no-repeat;
+
+		}
+		&.active{
+			color: #000;
+			border-bottom: 3px solid #1e1e1e;
+			cursor: default;
+		}
+		&_1{
+			&:after{
+				background-position: -2px -42px;
+				width: 17px;
+				height: 25px; 
+			}
+			
+		}
+		&_2{
+			&:after{
+				background-position: -2px -23px;
+				width: 18px;
+				height: 17px;
+			}
+			
+		}
+		&_3{
+			margin-right: 0;
+			&:after{
+				background-position: -2px -0px;
+				width: 22px;
+				height: 21px;
+			}
+		}
+	}
+}
+
+.b-title-blue{
+	color: #405f80;
+	font-size: 18px;
+	line-height: 18px;
+	display: block;
+	margin: 70px 0 23px 0;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.b-benefits{
+	&__item{
+		width: 215px;
+		padding: 0 0 0 50px;
+		margin: 0 140px 40px 0;
+		display: inline-block;
+		position: relative;
+
+		&:nth-child(2n){
+			margin-right: 0;
+		}
+		&:after{
+			content: "";
+			display: block;
+			background: url('../images/planet.png') no-repeat;
+			width: 28px;
+			height: 23px;
+			top: 20px;
+			left: 0;
+			position: absolute;
+		}
+	}
+}
+
+.b-hr_grey{
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #ebebeb;
+	margin: 65px 0 25px;
+}
+
+.b-price{
+	color: #405f80;
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.b-material-info{
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+///
+
+
+/// Четвертый блок
+
+.b-fourth-box{
+	background: url('../images/coffe.png') repeat top center;
+	padding: 125px 0;
+	text-align: center;
+	min-height: 540px;
+	color: #fff;
+	& .b-h1{
+		color: #fff;
+		margin-bottom: 85px;
+	}
 }
 
 ///
