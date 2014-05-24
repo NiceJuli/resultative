@@ -29,6 +29,18 @@ html{
 	 }
 }
 
+
+.b-title-uppercase{
+	text-transform: uppercase;
+	color: #000;
+	font-size: 18px;
+
+}
+
+.b-text_center{
+	text-align: center;
+}
+
 ul{
 	list-style: none;
 	margin: 0;
@@ -55,6 +67,11 @@ ul{
 	text-decoration: none;
 	text-transform: uppercase;
 	font: 700 14px/14px 'Open Sans', sans-serif;
+	&_big{
+		padding: 20px 32px;
+		font-size: 18px;
+
+	}
 }
 
 .b-float{
@@ -298,11 +315,20 @@ ul{
 .b-title-blue{
 	color: #405f80;
 	font-size: 18px;
-	line-height: 18px;
+	line-height: 16px;
 	display: block;
 	margin: 70px 0 23px 0;
 	text-transform: uppercase;
 	font-weight: 700;
+	&_mt0{
+		margin-top: 0;
+	}
+	&_noUp{
+		text-transform: none;
+	}
+	&_mb5{
+		margin-bottom: 5px;
+	}
 }
 
 .b-benefits{
@@ -352,13 +378,97 @@ ul{
 ///
 
 
+/// Третий блок
+
+.b-third-box{
+	background: #f6f6f5;
+	padding: 100px 0;
+}
+
+.b-history__title{
+	font: 700 30px 'Open Sans', sans-serif;
+	color: #000;
+	display: block;
+	margin-bottom: 80px;
+}
+
+.b-history-part{
+	
+	&_left{
+		width: 515px;
+		float: left;
+	}
+	&_right{
+		width: 400px;
+		float: right;
+	}
+}
+
+.b-text_small{
+	font-size: 13px;
+}
+
+.b-citata{
+	font: 400 italic 13px/24px 'Open Sans', sans-serif;
+}
+
+.b-link-more{
+	color: #888;
+	display: inline-block;
+	border-bottom: 1px solid;
+	text-decoration: none;
+	text-transform: uppercase;
+	font: 400 10px/18px 'Open Sans', sans-serif;
+	&:hover{
+		text-decoration: none;
+		border-bottom: 0;
+	}
+}
+
+.b-history{
+	width: 100%;
+	overflow: hidden;
+	&-box{
+		width: 10000px;
+		position: relative;
+	}
+	&__item{
+		float: left;
+		width: 980px;
+		margin: 0 90px;
+	}
+	&__btn{
+		display: block;
+		position: absolute;
+		cursor: pointer;
+		top: 50%;
+		background: url('../images/arrows.png') no-repeat;
+		width: 41px;
+		height: 75px;
+		&_prev{
+			left: 0;
+			background-position: -45px -0px;
+			&:hover{
+				background-position: -2px -0px;
+			}
+		}
+		&_next{
+			right: 0;
+			background-position: -45px -77px;
+			&:hover{
+				background-position: -2px -77px;
+			}
+		}
+	}
+}
+////
+
 /// Четвертый блок
 
 .b-fourth-box{
 	background: url('../images/coffe.png') repeat top center;
-	padding: 125px 0;
+	padding: 125px 0 190px;
 	text-align: center;
-	min-height: 540px;
 	color: #fff;
 	& .b-h1{
 		color: #fff;
@@ -366,4 +476,21 @@ ul{
 	}
 }
 
+.b-float-paragraf{
+	line-height: 32px;
+	margin: 0 0 100px;
+	text-align: left;
+	&_left{
+		float: left;
+		width: 530px;
+	}
+	&_right{
+		float: right;
+		width: 560px;
+	}
+}
 ///
+
+.b-margin_b50{
+	margin-bottom: 50px;
+}
