@@ -3,17 +3,19 @@ $(function() {
 	switchBenefits();
 	sliderHistory();
 	initTabs();
+	showNews();
 });
 
 $(window).resize(function(event) {
 	initSochiLayout();
 });
 
+
 function initSochiLayout() {
-	if($(window).height() > 850) {
+	if($(window).height() > 850 && $(window).width()>480) {
 		$('.b-first-box').css({height: $(window).height()-$('.b-header').outerHeight()});
 	} else {
-		$('.b-first-box').css({height: 850 - $('.b-header').outerHeight() + 'px'});
+		$('.b-first-box').css({height: "auto"});
 	}
 }
 
@@ -85,3 +87,18 @@ function initTabs() {
 	});
 }
 
+function showNews(){
+	var news = $('.b-news');
+	$('.b-btn-blog').mouseenter(function(){
+		news.fadeIn(400);
+	});
+	$('.b-news__close').click(function(){
+		news.fadeOut(300);
+	});
+	$('.b-header').click(function(){
+		news.fadeOut(300);
+	});
+	$('.b-wrapper').click(function(){
+		news.fadeOut(300);
+	});
+}
