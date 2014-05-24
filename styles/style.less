@@ -603,24 +603,18 @@ ul{
 	}
 
 	.b-switch{
-		display: block;
-		padding: 0;
+		margin-top: 50px;
 		&__item{
 			display: inline-block;
-			font-size: 30px;
-			padding-bottom: 15px;
-			color: #9c9c9c;
-			margin-right: 133px;
-			font-weight: 700;
-			position: relative;
-			cursor: pointer;
+			font-size: 15px;
+			padding-bottom: 0;
+			margin-right: 33px;
 			&:after{
 				content: "";
 				display: block;
 				position: absolute;
-				top: -15px;
-				right: -25px;
-				background: url('../images/switch.png') no-repeat;
+				right: 50%;
+				margin-right: -10px;
 
 			}
 			&.active{
@@ -630,93 +624,53 @@ ul{
 			}
 			&_1{
 				&:after{
-					background-position: -2px -42px;
-					width: 17px;
-					height: 25px; 
+					top: -30px
 				}
 				
 			}
 			&_2{
 				&:after{
-					background-position: -2px -23px;
-					width: 18px;
-					height: 17px;
+					top: -25px;
 				}
 				
 			}
 			&_3{
 				margin-right: 0;
 				&:after{
-					background-position: -2px -0px;
-					width: 22px;
-					height: 21px;
+					top: -25px;
 				}
 			}
 		}
 	}
 
 	.b-title-blue{
-		color: #405f80;
-		font-size: 18px;
-		line-height: 16px;
-		display: block;
-		margin: 70px 0 23px 0;
-		text-transform: uppercase;
-		font-weight: 700;
-		&_mt0{
-			margin-top: 0;
-		}
-		&_noUp{
-			text-transform: none;
-		}
-		&_mb5{
-			margin-bottom: 5px;
-		}
+		font-size: 13px;
+		line-height: 11px;
+		margin: 30px 0 23px 0;
 	}
 
 	.b-benefits{
 		&__item{
-			width: 215px;
-			padding: 0 0 0 50px;
-			margin: 0 140px 40px 0;
-			display: inline-block;
-			position: relative;
-
-			&:nth-child(2n){
-				margin-right: 0;
-			}
+			width: 100%;
+			padding: 0 0 0 30px;
+			margin: 0 0 17px 0;
+			display: block;
+			box-sizing:border-box;
 			&:after{
-				content: "";
-				display: block;
-				background: url('../images/planet.png') no-repeat;
-				width: 28px;
-				height: 23px;
-				top: 20px;
-				left: 0;
-				position: absolute;
+				background: url('../images/planet-small.png') no-repeat;
+				width: 19px;
+				height: 15px;
+				top: 6px;
 			}
 		}
 	}
 
 	.b-hr_grey{
-		display: block;
-		width: 100%;
-		height: 2px;
-		background: #ebebeb;
-		margin: 65px 0 25px;
+		margin: 25px 0;
 	}
 
 	.b-price{
-		color: #405f80;
-		font-size: 30px;
-		font-weight: 700;
-	}
-
-	.b-material-info{
-		display: none;
-		&.active{
-			display: block;
-		}
+		font-size: 15px;
 	}
 
 }
