@@ -8,6 +8,7 @@ $(function() {
 
 $(window).resize(function(event) {
 	initSochiLayout();
+	sliderHistory();
 });
 
 
@@ -34,13 +35,20 @@ function sliderHistory(){
 		next = $('.b-history__btn_next'),
 		slider = $('.b-history'),
 		list = $('.b-history-box'),
-		listItem = $('.b-history__item'),
-		scrollWidth = listItem.outerWidth(true),
+		listItem = $('.b-history__item');
+		if($(window).width()<480){
+			var windowW = $(window).width();
+			listItem.css('width', windowW);
+		} else{
+			listItem.css('width', '980px');
+		}
+	var	scrollWidth = listItem.outerWidth(true),
 		sliderWidth = list.filter(":visible").find(listItem).length*scrollWidth;
 
 
 	list.css('width', sliderWidth);
 	slider.animate({scrollLeft: 0}, 0);
+	
 
 	next.click(function(){
 		slider.animate({scrollLeft : '+='+scrollWidth}, 800);
