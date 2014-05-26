@@ -9,7 +9,7 @@
         <title>Resultative</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
+        <link rel="stylesheet" href="scripts/fancybox/jquery.fancybox.css">
         <link rel="stylesheet" href="styles/style.css">
         
 
@@ -40,17 +40,50 @@
         </div>
         <div class="b-wrapper">
             <div class="b-first-box">
-            <div class="b-stars"></div>
-                <div class="b-nebular"></div>
-                <div class="b-container">
-                    <div class="b-logo"></div>
-                    <h1 class="b-h1">Работаем на результат</h1>
-                    <div class="b-hr_small"></div>
-                    <p class="b-first-box__info">
-                        Увеличиваем поток клиентов из интернета без магии. Наша задача — объем продаж. Работаем на результат. Говорим в цифрах. Внедряем CRM.
-                    </p>
-                    <a href="" class="b-btn">Узнать больше</a>
-                </div> 
+              <div class="b-stars"></div>
+              <div class="b-nebular"></div>
+              <div class="b-container">
+                  <div class="b-logo"></div>
+                  <h1 class="b-h1">Работаем на результат</h1>
+                  <div class="b-hr_small"></div>
+                  <p class="b-first-box__info">
+                      Увеличиваем поток клиентов из интернета без магии. Наша задача — объем продаж. Работаем на результат. Говорим в цифрах. Внедряем CRM.
+                  </p>
+                  <a href="#form-modal" class="b-btn modal-open">Узнать больше</a>
+              </div> 
+              <div style="display:none;">
+                <div class="b-form-modal" id="form-modal">
+                  <strong class="b-form-modal__title">Узнать больше</strong>
+                  <form action="" class="b-form" id="b-form">
+                    <div class="b-form__left">
+                      	<div class="b-form__item">
+                        	<label >имя</label>
+                       		<input type="text" name="name" placeholder="Иванов иван иванович">
+                      	</div>
+                     	 <div class="b-form__item">
+                        	<label >телефон</label>
+                        	<input type="tel" name="tel" placeholder="+792222222222">
+                     	 </div>
+						<div class="b-form__item">
+	                        <label >e-mail</label>
+	                        <input type="email" name="email" placeholder="example@email.com">
+                      	</div>
+                    </div>
+                    <div class="b-form__right">
+                    	<div class="b-form__item">
+	                    	<label for="">сообщение</label>
+	                    	<textarea  placeholder="напишите нам"></textarea>
+                    	</div>
+                    </div>
+					<div class="b-clear"></div>
+					<div class="b-text_center">
+						<input type="submit" value="Узнать больше"  class="b-btn b-btn_purple ">
+					</div>
+                    
+                  </form>
+                </div>
+              </div>
+              
             </div>
             <div class="b-second-box">
                 <div class="b-container">
@@ -205,10 +238,9 @@
                            </div>
                            <div class="b-history-part b-history-part_right">
                                <iframe src="http://player.vimeo.com/video/95844798?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="390" height="219" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                               <strong class="b-title-blue b-title-blue_mb5">Константинова <span class="b-title-blue_noUp">Юлия Евгеньевна</span></strong>
+                               <strong class="b-title-blue b-title-blue_mt50 b-title-blue_mb5">Константинова <span class="b-title-blue_noUp">Юлия Евгеньевна</span></strong>
                                <span class="b-text_small">Директор ООО "Клининг Универсал"</span>
                                <p class="b-citata">"... Компания Результатив помогла нам наладить продажи в интернете, выйти на новый уровень ...."</p>
-                               <a href="" class="b-link-more">посмотреть полностью</a>
                            </div>
                            <div class="b-clear"></div>
                         </div>
@@ -227,11 +259,14 @@
                                 </p>
                            </div>
                            <div class="b-history-part b-history-part_right">
-                               <iframe src="http://player.vimeo.com/video/95844798?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="390" height="219" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                               <strong class="b-title-blue b-title-blue_mb5">Константинова <span class="b-title-blue_noUp">Юлия Евгеньевна</span></strong>
+	                           <div class="b-history__img">
+	                           		<img src="images/otzyv.jpg" alt="отзыв">
+	                           </div>
+                               
+                               <strong class="b-title-blue b-title-blue_mt50 b-title-blue_mb5">Константинова <span class="b-title-blue_noUp">Юлия Евгеньевна</span></strong>
                                <span class="b-text_small">Директор ООО "Клининг Универсал"</span>
                                <p class="b-citata">"... Компания Результатив помогла нам наладить продажи в интернете, выйти на новый уровень ...."</p>
-                               <a href="" class="b-link-more">посмотреть полностью</a>
+                               <a href="images/otzyv-big.JPG" class="b-link-more modal-open" >посмотреть полностью</a>
                            </div>
                            <div class="b-clear"></div>
                         </div>
@@ -251,7 +286,7 @@
                            </div>
                            <div class="b-history-part b-history-part_right">
                                <iframe src="http://player.vimeo.com/video/95844798?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="390" height="219" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                               <strong class="b-title-blue b-title-blue_mb5">Константинова <span class="b-title-blue_noUp">Юлия Евгеньевна</span></strong>
+                               <strong class="b-title-blue b-title-blue_mt50 b-title-blue_mb5">Константинова <span class="b-title-blue_noUp">Юлия Евгеньевна</span></strong>
                                <span class="b-text_small">Директор ООО "Клининг Универсал"</span>
                                <p class="b-citata">"... Компания Результатив помогла нам наладить продажи в интернете, выйти на новый уровень ...."</p>
                                <a href="" class="b-link-more">посмотреть полностью</a>
@@ -292,6 +327,8 @@
             </div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="scripts/jquery.fancybox.pack.js"></script>
+        <script src="scripts/jquery.validate.min.js"></script>
         <script src="scripts/script.js"></script>
     </body>
 </html>

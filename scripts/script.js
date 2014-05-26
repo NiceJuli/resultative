@@ -4,6 +4,23 @@ $(function() {
 	sliderHistory();
 	initTabs();
 	showNews();
+	$('#b-form').validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            tel: {
+                required: true,
+                digits: true
+            },
+
+            name: {
+                required: true
+            }
+        }
+    });
+	$('.modal-open').fancybox();
 });
 
 $(window).resize(function(event) {
@@ -110,3 +127,9 @@ function showNews(){
 		news.fadeOut(300);
 	});
 }
+
+jQuery.extend(jQuery.validator.messages, {
+    required: "Это поле необходимо заполнить.",
+    email: "Пожалуйста, введите корретный адрес электронной почты.",
+    digits: "Пожалуйста, вводите только цифры."
+});

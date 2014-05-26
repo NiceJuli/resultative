@@ -73,6 +73,13 @@ ul{
 		font-size: 18px;
 
 	}
+	&_purple{
+		border-color: #5f6fae;
+		color: #5f6fae;
+		text-align: center;
+		cursor: pointer;
+		background: #fff;
+	}
 }
 
 .b-float{
@@ -388,6 +395,9 @@ ul{
 	&_mb5{
 		margin-bottom: 5px;
 	}
+	&_mt50{
+		margin-top: 50px;
+	}
 }
 
 .b-benefits{
@@ -556,6 +566,88 @@ ul{
 }
 ///
 
+
+/// modal 
+
+.b-form-modal{
+	display: block;
+	width: 615px;
+	text-align: center;
+	&__title{
+		display: block;
+		text-align: center;
+		color: #5f6fae;
+		font: 700 30px 'Open Sans', sans-serif;
+		margin-bottom: 45px;
+	}
+}
+
+.b-form{
+	text-align: left;
+	margin-bottom: 35px;
+	&__left{
+		float: left;
+		width: 290px;
+	}
+	&__right{
+		float: right;
+		width: 290px;
+		margin-bottom: 50px;
+	}
+	&__item{
+		width: 100%;
+		margin: 0 0 25px;
+		&>label{
+			display: block;
+			font: 700 14px 'Open Sans', sans-serif;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+		}
+		&>input,
+		&>textarea{
+			display: block;
+			padding: 15px;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			background: #fff;
+			border: 1px solid #a8a8a8;
+			font: 400 14px 'Open Sans', sans-serif;
+			&.error{
+				border-color: red;
+			}
+		}
+		&>textarea{
+			height: 250px;
+			max-height: 250px;
+			max-width: 290px;
+		}
+		.error{
+			color: red;
+			font-size: 13px;
+			text-transform: none;
+			font-weight: 400;
+		}
+	}
+}
+
+.fancybox-skin{
+	padding: 15px 35px !important;
+}
+
+.fancybox-close{
+	background: url('../images/close-popup.png') no-repeat;
+	width: 53px;
+	height: 54px;
+	top: -26px;
+	right: -26px;
+}
+
+
+///
+
+
 .b-margin_b50{
 	margin-bottom: 50px;
 }
@@ -657,6 +749,7 @@ ul{
 		font-size: 13px;
 		line-height: 11px;
 		margin: 30px 0 23px 0;
+
 	}
 
 	.b-benefits{
