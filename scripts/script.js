@@ -1,9 +1,11 @@
 $(function() {
-	initSochiLayout();
-	switchBenefits();
+	sizeFirstBlock();
+	switchBenefits($('.b-switch__item'), $('.b-material-info'));
+	switchBenefits($('.b-history__btn_mobile__one'), $('.b-history__item'));
 	sliderHistory();
 	initTabs();
 	showNews();
+	openHeaderMobile();
 	$('#b-form').validate({
         rules: {
             email: {
@@ -24,12 +26,12 @@ $(function() {
 });
 
 $(window).resize(function(event) {
-	initSochiLayout();
+	sizeFirstBlock();
 	sliderHistory();
 });
 
 
-function initSochiLayout() {
+function sizeFirstBlock() {
 	if($(window).height() > 850 && $(window).width()>480) {
 		$('.b-first-box').css({height: $(window).height()-$('.b-header').outerHeight()});
 	} else {
@@ -37,15 +39,16 @@ function initSochiLayout() {
 	}
 }
 
-function switchBenefits(){
-	$('.b-switch__item').click(function() {
+function switchBenefits(link, block){
+	link.click(function() {
 		var name = $(this).data('name');
-		$('.b-switch__item').removeClass('active');
+		link.removeClass('active');
 		$(this).addClass('active');
-		$('.b-material-info').removeClass('active');
-		$('.b-material-info').filter('.'+name).addClass('active');
+		block.removeClass('active');
+		block.filter('.'+name).addClass('active');
 	});
 }
+
 
 function sliderHistory(){
 	var prev = $('.b-history__btn_prev'),
@@ -133,3 +136,13 @@ jQuery.extend(jQuery.validator.messages, {
     email: "Пожалуйста, введите корретный адрес электронной почты.",
     digits: "Пожалуйста, вводите только цифры."
 });
+
+function openHeaderMobile(){
+	$('.b-header-mobile__link').click(function(){
+		if($('.b-header-mobile').hasClass('active')){
+			$('.b-header-mobile').removeClass('active');
+		} else{
+			$('.b-header-mobile').addClass('active');
+		}
+	});
+}
