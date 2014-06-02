@@ -108,6 +108,12 @@ function initTabs() {
 				});
 				
 			} 
+			if($(this).hasClass('b-menu__item_main')){
+				$('body, html').animate({scrollTop: $('.b-first-box').offset().top}, 1000, 'swing', function(){
+					scrolling = false;
+				});
+				
+			}
 		}
 		return false;
 	});
@@ -142,6 +148,10 @@ function openHeaderMobile(){
 		} else{
 			$('.b-header-mobile').addClass('active');
 		}
+	});
+
+	$('.b-menu-mobile__item').click(function(){
+		$('.b-header-mobile').removeClass('active');
 	});
 }
 
