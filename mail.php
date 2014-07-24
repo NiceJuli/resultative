@@ -8,5 +8,4 @@ $address = "resultative@ya.ru ";
 $mes = "Имя: $name\r\nТелефон: $tel\r\nПочта: $email\r\nКомментарий: $com\r\n";
 $headers = "Content-type:text/plain; charset='utf-8' \r\n";
 mail ($address,$sub,$mes,$headers);
-
 ?>

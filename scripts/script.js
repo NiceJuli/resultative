@@ -17,13 +17,13 @@ $(function() {
             }
         }
     });
+
 	
 
 
 	$("#phone").mask("+7 (999) 999-9999");
 	initModal();
 	
-
 });
 
 $(window).resize(function(event) {
@@ -105,7 +105,6 @@ function sliderHistory(){
         prev.addClass('b-history__btn_noactive');
         next.addClass('b-history__btn_noactive');
     }
-
 }
 
 var scrolling = false;
