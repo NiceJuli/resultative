@@ -7,6 +7,16 @@ html{
 	padding: 0;
 	font: 400 15px/24px 'Noto Sans', sans-serif;
 	color: #888;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+body{
+	overflow-x: hidden;
+	min-width: 1170px;
+	
 }
 
 .b-clear {
@@ -54,6 +64,7 @@ ul{
 .b-wrapper{
 	position: relative;
 	width: 100%;
+	height: 100%;
 }
 
 .b-container{
@@ -71,8 +82,12 @@ ul{
 	text-decoration: none;
 	text-transform: uppercase;
 	font: 700 14px/14px 'Noto Sans', sans-serif;
+	&:hover{
+		background: #fff;
+		color: #000;
+	}
 	&_big{
-		padding: 20px 32px;
+		padding: 22px 45px;
 		font-size: 18px;
 
 	}
@@ -82,7 +97,12 @@ ul{
 		text-align: center;
 		cursor: pointer;
 		background: #fff;
+		&:hover{
+			background: #5f6fae;
+			color: #fff;
+		}
 	}
+	
 }
 
 .b-float{
@@ -103,7 +123,7 @@ ul{
 	width: 100%;
 	background: #fff;
 	height: 84px;
-	z-index: 5;
+	z-index: 10;
 	border-top: 1px solid #d5d4d4;
 }
 
@@ -166,16 +186,35 @@ ul{
 		text-decoration: none;
 		border: 3px solid #030608;
 		margin: 0 6px 0 0;
+		cursor: pointer;
 		&:hover{
 			background-color: #fff;
 			color: #000;
 		} 
 		&_t{
-			background: #000 url('../images/twitter-white-s.png') no-repeat center;
+			position: relative;
+			&:after{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -11px;
+				margin-left: -11px;
+				width: 22px;
+				height: 22px;
+
+				background: url('../images/twitter-s.png') no-repeat -2px -24px;
+				
+			}
 			&:hover{
-				background-image: url('../images/twitter-black-s.png');
+				&:after{
+					background-position: -2px -0px;
+				}
+				
 			}
 		}
+		
 	}
 }
 
@@ -224,6 +263,7 @@ ul{
 		width: 19px;
 		height: 18px;
 		cursor: pointer;
+		
 	}
 	&__title{
 		display: inline-block;
@@ -250,7 +290,7 @@ ul{
 	width: 100%;
 	min-width: 1170px;
 	padding: 90px 0;
-	background: url('../images/fone-stars.jpg') #1e1e1e;
+	background: #1e1e1e;
 	color: #fff; 
 	text-align: center;
 	position: relative;
@@ -287,7 +327,7 @@ ul{
 	left: 0;
 	width: 100%;
 	height: 910px;
-	background: url('../images/nebular.png') repeat-x;
+	background: #1e1e1e url('../images/nebular.png') repeat-x top center;
 	z-index: 1;
 }
 
@@ -297,9 +337,12 @@ ul{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 200%;
 	background: url('../images/stars-big.png') repeat;
 	z-index: 2;
+	&_2{
+		background: url('../images/stars-big2.png') repeat;
+	}
 }
 
 .b-header-mobile{
@@ -319,6 +362,8 @@ ul{
 	background: #fff;
 	overflow: hidden;
 	border-bottom: 1px solid #d5d4d4;
+	z-index: 5;
+
 }
 
 .b-block-left{
@@ -412,6 +457,9 @@ ul{
 	&_mt44{
 		margin-top: 44px;
 	}
+	&_mt32{
+		margin-top: 32px;
+	}
 }
 
 .b-benefits{
@@ -466,14 +514,14 @@ ul{
 
 .b-third-box{
 	background: #f6f6f5;
-	padding: 100px 0;
+	padding: 96px 0 66px;
 }
 
 .b-history__title{
 	font: 700 30px 'Noto Sans', sans-serif;
 	color: #000;
 	display: block;
-	margin-bottom: 80px;
+	margin-bottom: 77px;
 }
 
 .b-history-part{
@@ -483,7 +531,8 @@ ul{
 		float: left;
 	}
 	&_right{
-		width: 400px;
+		padding-top: 4px;
+		width: 394px;
 		float: right;
 	}
 }
@@ -494,6 +543,8 @@ ul{
 
 .b-citata{
 	font: 400 italic 13px/24px 'Noto Sans', sans-serif;
+	display: block;
+	margin-top: 10px;
 }
 
 .b-link-more{
@@ -529,6 +580,7 @@ ul{
 		background: url('../images/arrows.png') no-repeat;
 		width: 41px;
 		height: 75px;
+		opacity: 1;
 		&_prev{
 			left: 0;
 			background-position: -45px -0px;
@@ -549,13 +601,17 @@ ul{
 .b-history__btn_mobile{
 	display: none;
 }
+
+.b-history__btn_noactive{
+	display: none;
+}
 ////
 
 /// Четвертый блок
 
 .b-fourth-box{
 	background: url('../images/coffe.jpg') repeat top center;
-	padding: 125px 0 190px;
+	padding: 120px 0 216px;
 	text-align: center;
 	color: #fff;
 	width: 100%;
@@ -568,7 +624,7 @@ ul{
 
 .b-float-paragraf{
 	line-height: 32px;
-	margin: 0 0 100px;
+	margin: 0 0 75px;
 	text-align: left;
 	&_left{
 		float: left;
@@ -583,6 +639,71 @@ ul{
 
 
 /// modal 
+.b-modal-overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 100;
+	display: none;
+	&_fancks{
+		& .b-modal{
+			height: 170px;
+			margin-top: -85px;
+		}	
+
+	}
+	&_img{
+		text-align: center;
+	}
+}
+
+.b-modal{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 615px;
+	height: 500px;
+	background: #fff;
+	margin-left: -342.5px;
+	margin-top: -274px;
+	padding: 15px 35px;
+	&__close{
+		display: block;
+		position: absolute;
+		background: url('../images/close-popup.png') no-repeat;
+		width: 53px;
+		height: 54px;
+		top: -26px;
+		right: -26px;
+		-webkit-transition: all 0.2s ease-out;
+		-moz-transition: all 0.2s ease-out;
+		transition: all 0.2s ease-out;
+		cursor: pointer;
+		&:hover{
+			-webkit-transform: rotate(180deg);
+			-moz-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+
+	}
+	&_img{
+		width: auto;
+		height: auto;
+		max-width: 90%;
+		max-height: 90%;
+		margin-top: 0;
+		margin-left: 0;
+		display: inline-block;
+		left: auto;
+		position: relative;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+}
 
 .b-form-modal{
 	display: block;
@@ -639,11 +760,15 @@ ul{
 			max-width: 290px;
 		}
 		.error{
-			color: red;
 			font-size: 13px;
+			color: red;
 			text-transform: none;
 			font-weight: 400;
+			
 		}
+	}
+	input.error{
+		font-size: 14px;
 	}
 }
 
@@ -657,6 +782,14 @@ ul{
 	height: 54px;
 	top: -26px;
 	right: -26px;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	&:hover{
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
 }
 
 
@@ -676,20 +809,50 @@ ul{
 }
 
 
+@media screen and (max-height: 900px) {
+
+	.b-first-box{
+		padding: 50px 0;
+		& .b-h1{
+			font-size: 54px;
+		}
+		&__info{
+			font: 700 22px/32px 'Noto Sans', sans-serif;
+			margin: 0 auto 56px;
+			max-width: 700px;
+		}
+	}
+
+	.b-logo{
+		margin: 0 0 47px;
+	}
+
+	.b-hr_small{
+		margin: 49px 0 35px;
+	}
+
+}
+
 @media screen and (max-width: 480px) {
 	body,
 	html{
 		font: 400 13px/23px 'Noto Sans', sans-serif;
+		min-width: 320px;
 		
 	}
 
 	.b-h1{
 		font: 700 24px/26px 'Noto Sans', sans-serif;
 	}
-		.b-wrapper{
-			min-width: 320px;
-			overflow-x: hidden;
+	.b-wrapper{
+		min-width: 320px;
+		overflow-x: hidden;
+	}
+	.b-first-box{
+		& .b-h1{
+			font-size: 24px;
 		}
+	}
 	.b-container{
 		width: 85.9%;
 	}
@@ -860,6 +1023,10 @@ ul{
 		font-size: 13px;
 		margin-top: 10px;
 	}
+	.b-btn_purple {
+		width: 100%;
+		padding: 11px 0;
+	}
 	.b-history__btn_mobile{
 		position: absolute;
 		top: 67px;
@@ -912,6 +1079,11 @@ ul{
 				text-decoration: none;
 				text-align: center;
 				cursor: pointer;
+				vertical-align: top;
+				&_t{
+					background: url('../images/twitter-white-xs.png') no-repeat center #a4a4a4;
+				}
+				
 			}
 			
 		}
@@ -920,16 +1092,16 @@ ul{
 		display: block;
 		width: 230px;
 		right: -230px;
-		padding: 5px 0 15px;
+		padding: 0 0 15px;
 		height: 100%;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		background: #6f7fbf;
 		color: #fff;
-		z-index: 20;
+		z-index: 40;
 		text-align: left;
 		-webkit-transition: right .25s ease;
 		   -moz-transition: right .25s ease;
@@ -964,6 +1136,8 @@ ul{
 			font: 700 13px/13px 'Noto Sans', sans-serif;
 			text-transform: uppercase;
 			cursor: pointer;
+			text-decoration: none;
+			color: #fff;
 			&:hover{
 				background: #5f6fae;
 			}
@@ -987,8 +1161,12 @@ ul{
 			padding: 9px 0;
 			font: 700 17px/17px 'Noto Sans', sans-serif;
 			margin: 0 5px 0 0;
+			vertical-align: top;
 			&:hover{
 				opacity: 1;
+			}
+			&_t{
+				background: url('../images/twitter-black-xs.png') no-repeat center #fff;
 			}
 		}
 	}
@@ -999,5 +1177,55 @@ ul{
 		color: #000;
 
 	}
+	.b-form-modal{
+		width: 100%;
+		text-align: center;
+		&__title{
+			margin-bottom: 20px;
+			font-size: 21px;
+		}
+	}
 
+	.b-form{
+		text-align: left;
+		margin-bottom: 35px;
+		&__left{
+			float: none;
+			width: 100%;
+		}
+		&__right{
+			float: none;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&__item{
+			width: 100%;
+			margin: 0 0 15px;
+			&>input,
+			&>textarea{
+				padding: 7px;
+				width: 100%;
+			}
+			&>textarea{
+				height: 70px;
+				max-height: 70px;
+				max-width: 100%;
+			}
+		}
+	}
+
+	.b-modal{
+		width: 280px;
+		height: 460px;
+		margin-left: -172px;
+		margin-top: -230px;
+	}
+
+}
+
+.b-scene{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
 }
